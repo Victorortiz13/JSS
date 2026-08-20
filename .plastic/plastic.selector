@@ -1,0 +1,4 @@
+repository "Jump Ship Shootout/JSS@20067510200667@cloud"
+  path "/"
+    br "/main"
+    co "/main"
