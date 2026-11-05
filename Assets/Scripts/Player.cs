@@ -5,8 +5,8 @@ public class PlayerHeliScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float flyStrength;
-    public bool gameOver = false;
-    
+    public GameObject bullet;
+    private Vector2 playerPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +26,8 @@ public class PlayerHeliScript : MonoBehaviour
         {
             rb.gravityScale = 0;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+            Instantiate(bullet, playerPos, bullet.transform.rotation);
+            
         }
         else
         {
